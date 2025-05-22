@@ -33,6 +33,61 @@ Or, if no argument is provided, it will prompt for the package name.
 - `create_list_item_enum(all_files_drawable)`: Builds the enum entries for each drawable.
 - `gen_drawable(package_name_app)`: Main function to generate the Kotlin file.
 
+```
++-----------------------------+
+|  Start (main)               |
++-----------------------------+
+             |
+             v
++-----------------------------+
+| Get package name (arg/input)|
++-----------------------------+
+             |
+             v
++-----------------------------+
+| gen_drawable(package_name)  |
++-----------------------------+
+             |
+             v
++-----------------------------+
+| create_child_folder         |
+| (for output .kt file)       |
++-----------------------------+
+             |
+             v
++-----------------------------+
+| get_all_file_paths          |
+| (from RES_FOLDER_PATH)      |
++-----------------------------+
+             |
+             v
++-----------------------------+
+| Filter drawable files       |
++-----------------------------+
+             |
+             v
++-----------------------------+
+| create_list_item_enum       |
+| (build enum list)           |
++-----------------------------+
+             |
+             v
++-----------------------------+
+| Fill CONTENT_FILE_TEMPLATE  |
+| (replace placeholders)      |
++-----------------------------+
+             |
+             v
++-----------------------------+
+| write_file (.kt output)     |
++-----------------------------+
+             |
+             v
++-----------------------------+
+|           End               |
++-----------------------------+
+```
+
 ### Requirements
 - Python 3.x
 - Run from the root of your Android project (expects res and java).
