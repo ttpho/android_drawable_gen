@@ -1,6 +1,12 @@
 # Android Drawable Gen 
 A Python script to auto-generate a Kotlin enum class for Android drawable resources, making it easier to reference drawables in a type-safe way.
 
+
+
+https://github.com/user-attachments/assets/a8206782-5a0b-4455-af77-bfd000090e2b
+
+
+
 ### Features
 
 - Scans your Android project's `res/drawable` folders for all drawable files.
