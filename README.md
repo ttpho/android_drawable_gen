@@ -81,7 +81,7 @@ To
 
 ```kotlin
 val context = LocalContext.current
-val drawableId = DrawableGenHelper.getResDrawable("icon_home").res
+val drawableId = remember(name) { DrawableGenHelper.getResDrawable(name).res }
 Image(
     painterResource(id = drawableId),
     contentDescription = "..."
