@@ -116,7 +116,17 @@ And helper functions to retrieve drawables by name.
 
 # Note 
 
-Change 
+
+
+There are some limited scenarios where `getIdentifier()` might seem necessary, such as when resource names are dynamically generated or determined at runtime (e.g., based on user input or server response). However, even in these cases, it's often better to look for alternative solutions:
+
+Use predefined arrays or maps: 
+- If you have a limited set of dynamically chosen resources, consider using an array of resource IDs or a map from a string key to a resource ID.
+Refactor your resource naming: 
+- Try to structure your resources in a way that allows you to use direct ID access, perhaps by using naming conventions that can be programmatically constructed.
+
+From:
+
 ```kotlin
 val context = LocalContext.current
 val drawableId = remember(name) {
@@ -132,7 +142,7 @@ Image(
 )
 ```
 
-To 
+To:
 
 ```kotlin
 val context = LocalContext.current
